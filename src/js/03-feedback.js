@@ -7,7 +7,7 @@ const refs = {
 };
 
 const FB_KEY = 'feedback-form-state';
-const value = {};
+let value = {};
 
 refs.form.addEventListener('submit', onFormSubmit);
 refs.form.addEventListener('input', throttle(onHaveText, 500));
@@ -20,6 +20,7 @@ function onFormSubmit(evt) {
 
   evt.currentTarget.reset();
   localStorage.removeItem(FB_KEY);
+  value = {};
 }
 
 function onHaveText(evt) {
