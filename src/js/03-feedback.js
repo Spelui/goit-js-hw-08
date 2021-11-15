@@ -16,7 +16,7 @@ savedValue();
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  console.log('Send form');
+  console.log(value);
 
   evt.currentTarget.reset();
   localStorage.removeItem(FB_KEY);
